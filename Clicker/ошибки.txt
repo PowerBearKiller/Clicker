@@ -1,0 +1,97 @@
+1ая ОШИБКА
+Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+
+
+2ая ОШИБКА
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+A problem occurred configuring project ':launcher'.
+> Could not resolve all artifacts for configuration ':launcher:classpath'.
+   > Could not download gradle-4.0.1.jar (com.android.tools.build:gradle:4.0.1)
+      > Could not get resource 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/4.0.1/gradle-4.0.1.jar'.
+         > Premature end of Content-Length delimited message body (expected: 5 251 006; received: 3 407 856)
+   > Could not download builder-4.0.1.jar (com.android.tools.build:builder:4.0.1)
+      > Could not get resource 'https://dl.google.com/dl/android/maven2/com/android/tools/build/builder/4.0.1/builder-4.0.1.jar'.
+         > Read timed out
+   > Could not download bundletool-0.13.2.jar (com.android.tools.build:bundletool:0.13.2)
+      > Could not get resource 'https://dl.google.com/dl/android/maven2/com/android/tools/build/bundletool/0.13.2/bundletool-0.13.2.jar'.
+         > Premature end of Content-Length delimited message body (expected: 32 326 603; received: 2 883 568)
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 18m 5s
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
+
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+
+3ая ОШИБКА
+
+CommandInvokationFailure: Gradle build failed. 
+D:\Artur\Unity\2020.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\bin\java.exe -classpath "D:\Artur\Unity\2020.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Tools\gradle\lib\gradle-launcher-6.1.1.jar" org.gradle.launcher.GradleMain "-Dorg.gradle.jvmargs=-Xmx4096m" "assembleRelease"
+
+stderr[
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+A problem occurred configuring project ':launcher'.
+> Could not resolve all artifacts for configuration ':launcher:classpath'.
+   > Could not download gradle-4.0.1.jar (com.android.tools.build:gradle:4.0.1)
+      > Could not get resource 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/4.0.1/gradle-4.0.1.jar'.
+         > Premature end of Content-Length delimited message body (expected: 5 251 006; received: 3 407 856)
+   > Could not download builder-4.0.1.jar (com.android.tools.build:builder:4.0.1)
+      > Could not get resource 'https://dl.google.com/dl/android/maven2/com/android/tools/build/builder/4.0.1/builder-4.0.1.jar'.
+         > Read timed out
+   > Could not download bundletool-0.13.2.jar (com.android.tools.build:bundletool:0.13.2)
+      > Could not get resource 'https://dl.google.com/dl/android/maven2/com/android/tools/build/bundletool/0.13.2/bundletool-0.13.2.jar'.
+         > Premature end of Content-Length delimited message body (expected: 32 326 603; received: 2 883 568)
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 18m 5s
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
+]
+stdout[
+Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+]
+exit code: 1
+UnityEditor.Android.Command.WaitForProgramToRun (UnityEditor.Utils.Program p, UnityEditor.Android.Command+WaitingForProcessToExit waitingForProcessToExit, System.String errorMsg) (at <fc7be335e11c4872b360501993848bfb>:0)
+UnityEditor.Android.Command.Run (System.Diagnostics.ProcessStartInfo psi, UnityEditor.Android.Command+WaitingForProcessToExit waitingForProcessToExit, System.String errorMsg) (at <fc7be335e11c4872b360501993848bfb>:0)
+UnityEditor.Android.Command.Run (System.String command, System.String args, System.String workingdir, UnityEditor.Android.Command+WaitingForProcessToExit waitingForProcessToExit, System.String errorMsg) (at <fc7be335e11c4872b360501993848bfb>:0)
+UnityEditor.Android.AndroidJavaTools.RunJava (System.String args, System.String workingdir, System.Action`1[T] progress, System.String error) (at <fc7be335e11c4872b360501993848bfb>:0)
+UnityEditor.Android.GradleWrapper.Run (UnityEditor.Android.AndroidJavaTools javaTools, System.String workingdir, System.String task, System.Action`1[T] progress) (at <fc7be335e11c4872b360501993848bfb>:0)
+Rethrow as GradleInvokationException: Gradle build failed
+UnityEditor.Android.GradleWrapper.Run (UnityEditor.Android.AndroidJavaTools javaTools, System.String workingdir, System.String task, System.Action`1[T] progress) (at <fc7be335e11c4872b360501993848bfb>:0)
+UnityEditor.Android.PostProcessor.Tasks.BuildGradleProject.Execute (UnityEditor.Android.PostProcessor.PostProcessorContext context) (at <fc7be335e11c4872b360501993848bfb>:0)
+UnityEditor.Android.PostProcessor.PostProcessRunner.RunAllTasks (UnityEditor.Android.PostProcessor.PostProcessorContext context) (at <fc7be335e11c4872b360501993848bfb>:0)
+Rethrow as BuildFailedException: Exception of type 'UnityEditor.Build.BuildFailedException' was thrown.
+UnityEditor.Android.PostProcessor.CancelPostProcess.AbortBuild (System.String title, System.String message, System.Exception ex) (at <fc7be335e11c4872b360501993848bfb>:0)
+UnityEditor.Android.PostProcessor.PostProcessRunner.RunAllTasks (UnityEditor.Android.PostProcessor.PostProcessorContext context) (at <fc7be335e11c4872b360501993848bfb>:0)
+UnityEditor.Android.PostProcessAndroidPlayer.PostProcess (UnityEditor.BuildTarget target, System.String stagingAreaData, System.String stagingArea, System.String playerPackage, System.String installPath, System.String companyName, System.String productName, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) (at <fc7be335e11c4872b360501993848bfb>:0)
+UnityEditor.Android.AndroidBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at <fc7be335e11c4872b360501993848bfb>:0)
+UnityEditor.PostprocessBuildPlayer.Postprocess (UnityEditor.BuildTargetGroup targetGroup, UnityEditor.BuildTarget target, System.String installPath, System.String companyName, System.String productName, System.Int32 width, System.Int32 height, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) (at <7ac35247888b44f4a7e290f1f6bb33f3>:0)
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr, Boolean&)
+
+
+4ая ОШИБКА
+Build completed with a result of 'Failed' in 2146 seconds (2146429 ms)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+
+5ая ОШИБКА
+UnityEditor.BuildPlayerWindow+BuildMethodException: 4 errors
+  at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002ca] in <7ac35247888b44f4a7e290f1f6bb33f3>:0 
+  at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <7ac35247888b44f4a7e290f1f6bb33f3>:0 
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
