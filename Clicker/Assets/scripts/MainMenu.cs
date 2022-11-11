@@ -72,13 +72,8 @@ public class MainMenu : MonoBehaviour
         farm_Zavod = PlayerPrefs.GetInt("farm_Zavod");
         farm_Fabric = PlayerPrefs.GetInt("farm_Fabric");
 
-        StartCoroutine(FarmAxe());
-        StartCoroutine(FarmDrovosek());
-        StartCoroutine(FarmBrigada());
-        StartCoroutine(FarmFarm());
-        StartCoroutine(FarmZavod());
-        StartCoroutine(FarmFabric());
-      
+
+        StartCoroutine(PasiveFarm());
         OfflineTime();
         
     }
@@ -88,16 +83,10 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("money", money);
 
     }
+    
+    
 
-    public void ToShop()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-    public void ToMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
+    
 
     public void BuyAxe()
     
@@ -262,54 +251,15 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    
-    IEnumerator FarmAxe()
+ 
+    IEnumerator PasiveFarm()
     {
         yield return new WaitForSeconds(1);
-        money = money + farm_axe;
+        money = money + aps;
         PlayerPrefs.SetInt("money", money);
-        StartCoroutine(FarmAxe());
-    }
-    IEnumerator FarmDrovosek()
-    {
-        yield return new WaitForSeconds(1);
-        money = money + farm_Drovosek;
-        PlayerPrefs.SetInt("money", money);
-        StartCoroutine(FarmDrovosek());
+        StartCoroutine(PasiveFarm());
     }
 
-    IEnumerator FarmBrigada()
-    {
-        yield return new WaitForSeconds(1);
-        money = money + farm_Brigada;
-        PlayerPrefs.SetInt("money", money);
-        StartCoroutine(FarmBrigada());
-    }
-
-    IEnumerator FarmFarm()
-    {
-        yield return new WaitForSeconds(1);
-        money = money + farm_Farm;
-        PlayerPrefs.SetInt("money", money);
-        StartCoroutine(FarmFarm());
-    }
-
-    IEnumerator FarmZavod()
-    {
-        yield return new WaitForSeconds(1);
-        money = money + farm_Zavod;
-        PlayerPrefs.SetInt("money", money);
-        StartCoroutine(FarmZavod());
-    }
-
-    IEnumerator FarmFabric()
-    {
-        yield return new WaitForSeconds(1);
-        money = money + farm_Fabric;
-        PlayerPrefs.SetInt("money", money);
-        StartCoroutine(FarmFabric());
-    }
-   
     private void OfflineTime()
     {
         TimeSpan ts;
